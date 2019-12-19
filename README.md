@@ -2,7 +2,7 @@
 
 ## Segmentation
 
-View full collection of resources [here](https://google.com)
+View full collection of resources [here](/EMDB-SFF/?_=x)
 
 
 <!-- ## Welcome to GitHub Pages
