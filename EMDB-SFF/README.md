@@ -4,10 +4,10 @@
 
 If you are interesting in contributing towards development of EMDB-SFF please consider joining the [working group](https://listserver.ebi.ac.uk/mailman/listinfo/segtrans-wg)
 
-#### v0.8.0.dev0 (draft for v0.8)
+#### v0.8.0.dev1 (draft for v0.8)
 
-- [Source](https://github.com/emdb-empiar/EMDB-SFF/tree/v0.8.0.dev0)
-- [Documentation](https://emdb-empiar.github.io/EMDB-SFF/v0.8.0.dev0/?_=x) 
+- [Source](https://github.com/emdb-empiar/EMDB-SFF/tree/v0.8.0.dev1)
+- [Documentation](https://emdb-empiar.github.io/EMDB-SFF/v0.8.0.dev1/?_=x) 
 
 #### v0.7.0.dev0
 
