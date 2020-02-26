@@ -2,7 +2,7 @@
 
 ### EMDB-SFF
 
-If you are interesting in contributing towards development of EMDB-SFF please consider joining the [working group](https://listserver.ebi.ac.uk/mailman/listinfo/segtrans-wg)
+If you are interesting in contributing towards development of EMDB-SFF please consider joining the [working group](https://listserver.ebi.ac.uk/mailman/listinfo/segtrans-wg).
 
 #### v0.8.0.dev1 (draft for v0.8)
 
@@ -21,6 +21,13 @@ If you are interesting in contributing towards development of EMDB-SFF please co
 - [Source](https://github.com/emdb-empiar/sfftk-rw)
 - [Python package](https://pypi.org/project/sfftk-rw/)
 - [Documentation](https://sfftk-rw.readthedocs.io/en/latest/index.html)
+
+
+#### <span style="color: red">New!</span> sfftk-migrate: Utility to Update Old EMDB-SFF Files
+
+- [Source](https://github.com/emdb-empiar/sfftk-migrate)
+- [Python package](https://pypi.org/project/sfftk-migrate/)
+- [Documentation](https://github.com/emdb-empiar/sfftk-migrate/blob/master/README.rst)
 
 #### sfftk: Convert Popular Segmentation Formats to EMDB-SFF
 
