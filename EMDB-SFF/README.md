@@ -16,25 +16,29 @@ If you are interesting in contributing towards development of EMDB-SFF please co
 
 ### EMDB-SFF Toolkits
 
-#### sfftk-rw: Read/Write EMDB-SFF Files
+#### `sfftk-rw`: Read/Write EMDB-SFF Files
 
 - [Source](https://github.com/emdb-empiar/sfftk-rw)
 - [Python package](https://pypi.org/project/sfftk-rw/)
 - [Documentation](https://sfftk-rw.readthedocs.io/en/latest/index.html)
 
 
-#### <span style="color: red">New!</span> sfftk-migrate: Utility to Update Old EMDB-SFF Files
+#### <span style="color: red">New!</span> `sfftk-migrate`: Utility to Update Old EMDB-SFF Files
 
 - [Source](https://github.com/emdb-empiar/sfftk-migrate)
 - [Python package](https://pypi.org/project/sfftk-migrate/)
 - [Documentation](https://github.com/emdb-empiar/sfftk-migrate/blob/master/README.rst)
 
-#### sfftk: Convert Popular Segmentation Formats to EMDB-SFF
+#### `sfftk`: Convert Popular Segmentation Formats to EMDB-SFF
 
 - [Source](https://github.com/emdb-empiar/sfftk)
 - [Python package](https://pypi.org/project/sfftk/)
 - [Documentation](https://sfftk.readthedocs.io/en/latest/index.html)
 
-#### SAT: Online sfftk
+#### SAT: Online `sfftk`
 
-- [EBI page (development branch)](https://wwwdev.ebi.ac.uk/pdbe/emdb/sat_branch/sat/)
+- [EBI page (development)](https://wwwdev.ebi.ac.uk/pdbe/emdb/sat/)
+
+#### Volume Browser: Repository of Annotated EMDB/EMPIAR Entries
+
+- [EBI page (development)](https://wwwdev.ebi.ac.uk/pdbe/emdb/volume-browser/)
