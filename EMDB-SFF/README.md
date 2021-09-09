@@ -23,7 +23,7 @@ If you are interesting in contributing towards development of EMDB-SFF please co
 - [Documentation](https://sfftk-rw.readthedocs.io/en/latest/index.html)
 
 
-#### <span style="color: red">New!</span> `sfftk-migrate`: Utility to Update Old EMDB-SFF Files
+#### `sfftk-migrate`: Utility to Update Old EMDB-SFF Files
 
 - [Source](https://github.com/emdb-empiar/sfftk-migrate)
 - [Python package](https://pypi.org/project/sfftk-migrate/)
@@ -37,8 +37,8 @@ If you are interesting in contributing towards development of EMDB-SFF please co
 
 #### SAT: Online `sfftk`
 
-- [EBI page (development)](https://wwwdev.ebi.ac.uk/pdbe/emdb/sat/)
+- [EBI page](https://www.ebi.ac.uk/empiar/sat/)
 
 #### Volume Browser: Repository of Annotated EMDB/EMPIAR Entries
 
-- [EBI page (development)](https://wwwdev.ebi.ac.uk/pdbe/emdb/volume-browser/)
+- [EBI page](https://www.ebi.ac.uk/empiar/volume-browser/)
