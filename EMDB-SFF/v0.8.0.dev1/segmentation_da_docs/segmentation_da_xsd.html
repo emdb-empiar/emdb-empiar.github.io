@@ -1201,12 +1201,12 @@ var modelBoxes= new Array('model_segmentation',
                                  <area alt="segmentation_da_xsd.tmp#segmentation_name" href="segmentation_da_xsd.html#segmentation_name" coords="223,212,336,254" />
                                  <area alt="segmentation_da_xsd.tmp#segmentation_software_list" href="segmentation_da_xsd.html#segmentation_software_list" coords="223,264,322,288" />
                                  <area alt="segmentation_da_xsd.tmp#segmentation_transform_list" href="segmentation_da_xsd.html#segmentation_transform_list" coords="223,298,330,322" />
-                                 <area alt="segmentation_da_xsd.tmp#segmentation_primary_descriptor" href="segmentation_da_xsd.html#segmentation_primary_descriptor" coords="223,375,417,417" />
-                                 <area alt="segmentation_da_xsd.tmp#segmentation_bounding_box" href="segmentation_da_xsd.html#segmentation_bounding_box" coords="223,470,396,512" />
-                                 <area alt="segmentation_da_xsd.tmp#segmentation_global_external_references" href="segmentation_da_xsd.html#segmentation_global_external_references" coords="223,522,400,546" />
-                                 <area alt="segmentation_da_xsd.tmp#segmentation_segment_list" href="segmentation_da_xsd.html#segmentation_segment_list" coords="223,556,322,580" />
-                                 <area alt="segmentation_da_xsd.tmp#segmentation_lattice_list" href="segmentation_da_xsd.html#segmentation_lattice_list" coords="223,590,308,614" />
-                                 <area alt="segmentation_da_xsd.tmp#segmentation_details" href="segmentation_da_xsd.html#segmentation_details" coords="223,624,336,666" /></map></div>
+                                 <area alt="segmentation_da_xsd.tmp#segmentation_primary_descriptor" href="segmentation_da_xsd.html#segmentation_primary_descriptor" coords="223,388,417,430" />
+                                 <area alt="segmentation_da_xsd.tmp#segmentation_bounding_box" href="segmentation_da_xsd.html#segmentation_bounding_box" coords="223,483,396,525" />
+                                 <area alt="segmentation_da_xsd.tmp#segmentation_global_external_references" href="segmentation_da_xsd.html#segmentation_global_external_references" coords="223,535,400,559" />
+                                 <area alt="segmentation_da_xsd.tmp#segmentation_segment_list" href="segmentation_da_xsd.html#segmentation_segment_list" coords="223,569,322,593" />
+                                 <area alt="segmentation_da_xsd.tmp#segmentation_lattice_list" href="segmentation_da_xsd.html#segmentation_lattice_list" coords="223,603,308,627" />
+                                 <area alt="segmentation_da_xsd.tmp#segmentation_details" href="segmentation_da_xsd.html#segmentation_details" coords="223,637,336,679" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -1428,6 +1428,9 @@ var modelBoxes= new Array('model_segmentation',
 </span><span class="tT"></span><span class="tI">
 </span><span class="tT">0.8.0.dev1, 2020/01/29, Paul Korir:</span><span class="tI">
 </span><span class="tT">Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute erroneously placed in 'software_list' and should be a list of 0 or more 'software' elements</span><span class="tI">
+</span><span class="tT"></span><span class="tI">
+</span><span class="tT">0.8.0.dev1, 2023/01/30, Paul Korir:</span><span class="tI">
+</span><span class="tT">Clarified that transform units are in angstroms (Å).</span><span class="tI">
 </span></pre></td>
                                              </tr>
                                           </table>
@@ -1464,7 +1467,7 @@ var modelBoxes= new Array('model_segmentation',
       </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"transform_list"</span><span class="tAN"> minOccurs=</span><span class="tAV">"1"</span><span class="tEl">&gt;</span><span class="tI">
         </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Mandatory field. The first 'transformation_matrix' must be the image-to-physical transform.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Mandatory field. The first 'transformation_matrix' must be the image-to-physical transform with scale parameters (diagonal elements) in angstroms (Å). The right-most column consists of the translation applied and is the physical distance from the physical origin in anstroms (Å).</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
         </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
         </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
@@ -1653,6 +1656,8 @@ Version History
 0.8.0.dev1, 2020/01/29, Paul Korir:
 Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute erroneously placed in 'software_list' and should be a list of 0 or more 'software' elements
 
+0.8.0.dev1, 2023/01/30, Paul Korir:
+Clarified that transform units are in angstroms (Å).
 </span><span class="tCD">]]</span><span class="tCD">&gt;</span><span class="tI">
         </span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
@@ -1766,7 +1771,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_segmentation_name" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_segmentation_name');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_segmentation_name" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_name_3.jpeg" /></div>
+                           <div id="diagram_segmentation_name" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_name.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -2082,7 +2087,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_software_type_name" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_software_type_name');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_software_type_name" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_name.jpeg" /></div>
+                           <div id="diagram_software_type_name" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_name_3.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -2304,8 +2309,10 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">Mandatory field. The first 'transformation_matrix' must</span><span class="tI">
-</span><span class="tT">be the image-to-physical transform.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">Mandatory field. The first 'transformation_matrix' must be the</span><span class="tI">
+</span><span class="tT">image-to-physical transform with scale parameters (diagonal elements) in angstroms (Å). The</span><span class="tI">
+</span><span class="tT">right-most column consists of the translation applied and is</span><span class="tI">
+</span><span class="tT">the physical distance from the physical origin in anstroms (Å).</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -2381,7 +2388,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"transform_list"</span><span class="tAN"> minOccurs=</span><span class="tAV">"1"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Mandatory field. The first 'transformation_matrix' must be the image-to-physical transform.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Mandatory field. The first 'transformation_matrix' must be the image-to-physical transform with scale parameters (diagonal elements) in angstroms (Å). The right-most column consists of the translation applied and is the physical distance from the physical origin in anstroms (Å).</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
@@ -2567,7 +2574,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_transformation_matrix_type_rows" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_transformation_matrix_type_rows');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_transformation_matrix_type_rows" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_rows_2.jpeg" /></div>
+                           <div id="diagram_transformation_matrix_type_rows" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_rows.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -2637,7 +2644,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_transformation_matrix_type_cols" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_transformation_matrix_type_cols');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_transformation_matrix_type_cols" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_cols.jpeg" /></div>
+                           <div id="diagram_transformation_matrix_type_cols" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_cols_2.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -2707,7 +2714,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_transformation_matrix_type_data" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_transformation_matrix_type_data');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_transformation_matrix_type_data" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_data_1.jpeg" /></div>
+                           <div id="diagram_transformation_matrix_type_data" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_data.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -3172,7 +3179,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_segmentation_segmentation_global_external_references_ref" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_segmentation_segmentation_global_external_references_ref');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_segmentation_segmentation_global_external_references_ref" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_ref_1.jpeg" usemap="#segmentation_da_xsd_Element_ref_1" /><map name="segmentation_da_xsd_Element_ref_1" id="segmentation_da_xsd_Element_ref_1">
+                           <div id="diagram_segmentation_segmentation_global_external_references_ref" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_ref.jpeg" usemap="#segmentation_da_xsd_Element_ref" /><map name="segmentation_da_xsd_Element_ref" id="segmentation_da_xsd_Element_ref">
                                  <area alt="segmentation_da_xsd.tmp#external_reference_type_id" href="segmentation_da_xsd.html#external_reference_type_id" coords="251,78,437,120" />
                                  <area alt="segmentation_da_xsd.tmp#external_reference_type_resource" href="segmentation_da_xsd.html#external_reference_type_resource" coords="251,130,364,172" />
                                  <area alt="segmentation_da_xsd.tmp#external_reference_type_url" href="segmentation_da_xsd.html#external_reference_type_url" coords="251,182,364,224" />
@@ -3706,7 +3713,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_segment_type_segment_type_biological_annotation_name" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_segment_type_segment_type_biological_annotation_name');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_segment_type_segment_type_biological_annotation_name" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_name_2.jpeg" /></div>
+                           <div id="diagram_segment_type_segment_type_biological_annotation_name" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_name_1.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -3959,7 +3966,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_segment_type_segment_type_biological_annotation_segment_type_segment_type_biological_annotation_external_references_ref" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_segment_type_segment_type_biological_annotation_segment_type_segment_type_biological_annotation_external_references_ref');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_segment_type_segment_type_biological_annotation_segment_type_segment_type_biological_annotation_external_references_ref" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_ref.jpeg" usemap="#segmentation_da_xsd_Element_ref" /><map name="segmentation_da_xsd_Element_ref" id="segmentation_da_xsd_Element_ref">
+                           <div id="diagram_segment_type_segment_type_biological_annotation_segment_type_segment_type_biological_annotation_external_references_ref" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_ref_1.jpeg" usemap="#segmentation_da_xsd_Element_ref_1" /><map name="segmentation_da_xsd_Element_ref_1" id="segmentation_da_xsd_Element_ref_1">
                                  <area alt="segmentation_da_xsd.tmp#external_reference_type_id" href="segmentation_da_xsd.html#external_reference_type_id" coords="251,78,437,120" />
                                  <area alt="segmentation_da_xsd.tmp#external_reference_type_resource" href="segmentation_da_xsd.html#external_reference_type_resource" coords="251,130,364,172" />
                                  <area alt="segmentation_da_xsd.tmp#external_reference_type_url" href="segmentation_da_xsd.html#external_reference_type_url" coords="251,182,364,224" />
@@ -4934,7 +4941,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_three_d_volume_type_value" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_three_d_volume_type_value');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_three_d_volume_type_value" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_value_1.jpeg" /></div>
+                           <div id="diagram_three_d_volume_type_value" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_value.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -5008,7 +5015,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_three_d_volume_type_transform_id" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_three_d_volume_type_transform_id');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_three_d_volume_type_transform_id" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_transform_id_2.jpeg" /></div>
+                           <div id="diagram_three_d_volume_type_transform_id" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_transform_id_5.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -5922,7 +5929,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_mesh_type_transform_id" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_mesh_type_transform_id');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_mesh_type_transform_id" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_transform_id_5.jpeg" /></div>
+                           <div id="diagram_mesh_type_transform_id" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_transform_id_2.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -6733,7 +6740,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_volume_structure_type_rows" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_volume_structure_type_rows');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_volume_structure_type_rows" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_rows_1.jpeg" /></div>
+                           <div id="diagram_volume_structure_type_rows" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_rows_2.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -6998,7 +7005,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_volume_index_type_cols" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_volume_index_type_cols');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_volume_index_type_cols" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_cols_2.jpeg" /></div>
+                           <div id="diagram_volume_index_type_cols" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_cols.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -7068,7 +7075,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_volume_index_type_rows" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_volume_index_type_rows');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_volume_index_type_rows" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_rows.jpeg" /></div>
+                           <div id="diagram_volume_index_type_rows" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_rows_1.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -7226,7 +7233,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_lattice_type_data" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_lattice_type_data');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_lattice_type_data" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_data.jpeg" /></div>
+                           <div id="diagram_lattice_type_data" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_data_1.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -7554,7 +7561,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_cuboid_x" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_cuboid_x');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_cuboid_x" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_x_4.jpeg" usemap="#segmentation_da_xsd_Element_x_4" /><map name="segmentation_da_xsd_Element_x_4" id="segmentation_da_xsd_Element_x_4">
+                           <div id="diagram_cuboid_x" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_x.jpeg" usemap="#segmentation_da_xsd_Element_x" /><map name="segmentation_da_xsd_Element_x" id="segmentation_da_xsd_Element_x">
                                  <area alt="segmentation_da_xsd.tmp#dimension_type" href="segmentation_da_xsd.html#dimension_type" coords="178,8,318,34" /></map></div>
                         </td>
                      </tr>
@@ -7644,7 +7651,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_cuboid_y" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_cuboid_y');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_cuboid_y" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_y_1.jpeg" usemap="#segmentation_da_xsd_Element_y_1" /><map name="segmentation_da_xsd_Element_y_1" id="segmentation_da_xsd_Element_y_1">
+                           <div id="diagram_cuboid_y" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_y_5.jpeg" usemap="#segmentation_da_xsd_Element_y_5" /><map name="segmentation_da_xsd_Element_y_5" id="segmentation_da_xsd_Element_y_5">
                                  <area alt="segmentation_da_xsd.tmp#dimension_type" href="segmentation_da_xsd.html#dimension_type" coords="178,8,318,34" /></map></div>
                         </td>
                      </tr>
@@ -7734,7 +7741,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_cuboid_z" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_cuboid_z');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_cuboid_z" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_z_2.jpeg" usemap="#segmentation_da_xsd_Element_z_2" /><map name="segmentation_da_xsd_Element_z_2" id="segmentation_da_xsd_Element_z_2">
+                           <div id="diagram_cuboid_z" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_z_5.jpeg" usemap="#segmentation_da_xsd_Element_z_5" /><map name="segmentation_da_xsd_Element_z_5" id="segmentation_da_xsd_Element_z_5">
                                  <area alt="segmentation_da_xsd.tmp#dimension_type" href="segmentation_da_xsd.html#dimension_type" coords="178,8,318,34" /></map></div>
                         </td>
                      </tr>
@@ -7824,7 +7831,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_cuboid_transform_id" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_cuboid_transform_id');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_cuboid_transform_id" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_transform_id_4.jpeg" /></div>
+                           <div id="diagram_cuboid_transform_id" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_transform_id_1.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -8140,7 +8147,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_ellipsoid_x" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_ellipsoid_x');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_ellipsoid_x" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_x_1.jpeg" usemap="#segmentation_da_xsd_Element_x_1" /><map name="segmentation_da_xsd_Element_x_1" id="segmentation_da_xsd_Element_x_1">
+                           <div id="diagram_ellipsoid_x" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_x_2.jpeg" usemap="#segmentation_da_xsd_Element_x_2" /><map name="segmentation_da_xsd_Element_x_2" id="segmentation_da_xsd_Element_x_2">
                                  <area alt="segmentation_da_xsd.tmp#dimension_type" href="segmentation_da_xsd.html#dimension_type" coords="178,8,318,34" /></map></div>
                         </td>
                      </tr>
@@ -8320,7 +8327,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_ellipsoid_z" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_ellipsoid_z');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_ellipsoid_z" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_z_1.jpeg" usemap="#segmentation_da_xsd_Element_z_1" /><map name="segmentation_da_xsd_Element_z_1" id="segmentation_da_xsd_Element_z_1">
+                           <div id="diagram_ellipsoid_z" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_z_3.jpeg" usemap="#segmentation_da_xsd_Element_z_3" /><map name="segmentation_da_xsd_Element_z_3" id="segmentation_da_xsd_Element_z_3">
                                  <area alt="segmentation_da_xsd.tmp#dimension_type" href="segmentation_da_xsd.html#dimension_type" coords="178,8,318,34" /></map></div>
                         </td>
                      </tr>
@@ -8410,7 +8417,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_ellipsoid_transform_id" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_ellipsoid_transform_id');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_ellipsoid_transform_id" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_transform_id_1.jpeg" /></div>
+                           <div id="diagram_ellipsoid_transform_id" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_transform_id.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -8480,7 +8487,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_ellipsoid_attribute" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_ellipsoid_attribute');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_ellipsoid_attribute" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_attribute_1.jpeg" /></div>
+                           <div id="diagram_ellipsoid_attribute" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_attribute_3.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -8703,7 +8710,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_cylinder_height" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_cylinder_height');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_cylinder_height" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_height_1.jpeg" usemap="#segmentation_da_xsd_Element_height_1" /><map name="segmentation_da_xsd_Element_height_1" id="segmentation_da_xsd_Element_height_1">
+                           <div id="diagram_cylinder_height" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_height.jpeg" usemap="#segmentation_da_xsd_Element_height" /><map name="segmentation_da_xsd_Element_height" id="segmentation_da_xsd_Element_height">
                                  <area alt="segmentation_da_xsd.tmp#dimension_type" href="segmentation_da_xsd.html#dimension_type" coords="178,8,318,34" /></map></div>
                         </td>
                      </tr>
@@ -8883,7 +8890,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_cylinder_transform_id" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_cylinder_transform_id');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_cylinder_transform_id" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_transform_id.jpeg" /></div>
+                           <div id="diagram_cylinder_transform_id" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_transform_id_3.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -8953,7 +8960,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_cylinder_attribute" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_cylinder_attribute');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_cylinder_attribute" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_attribute_3.jpeg" /></div>
+                           <div id="diagram_cylinder_attribute" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_attribute_2.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -9176,7 +9183,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_cone_height" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_cone_height');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_cone_height" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_height.jpeg" usemap="#segmentation_da_xsd_Element_height" /><map name="segmentation_da_xsd_Element_height" id="segmentation_da_xsd_Element_height">
+                           <div id="diagram_cone_height" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_height_1.jpeg" usemap="#segmentation_da_xsd_Element_height_1" /><map name="segmentation_da_xsd_Element_height_1" id="segmentation_da_xsd_Element_height_1">
                                  <area alt="segmentation_da_xsd.tmp#dimension_type" href="segmentation_da_xsd.html#dimension_type" coords="178,8,318,34" /></map></div>
                         </td>
                      </tr>
@@ -9356,7 +9363,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_cone_transform_id" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_cone_transform_id');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_cone_transform_id" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_transform_id_3.jpeg" /></div>
+                           <div id="diagram_cone_transform_id" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_transform_id_4.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -9426,7 +9433,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_cone_attribute" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_cone_attribute');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_cone_attribute" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_attribute_2.jpeg" /></div>
+                           <div id="diagram_cone_attribute" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_attribute_1.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -10373,7 +10380,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_viewVectorRotationType_x" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_viewVectorRotationType_x');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_viewVectorRotationType_x" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_x.jpeg" /></div>
+                           <div id="diagram_viewVectorRotationType_x" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_x_5.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -10513,7 +10520,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_viewVectorRotationType_z" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_viewVectorRotationType_z');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_viewVectorRotationType_z" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_z_5.jpeg" /></div>
+                           <div id="diagram_viewVectorRotationType_z" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_z.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -10680,7 +10687,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_vertex_list_type_v" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_vertex_list_type_v');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_vertex_list_type_v" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_v_1.jpeg" usemap="#segmentation_da_xsd_Element_v_1" /><map name="segmentation_da_xsd_Element_v_1" id="segmentation_da_xsd_Element_v_1">
+                           <div id="diagram_vertex_list_type_v" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_v.jpeg" usemap="#segmentation_da_xsd_Element_v" /><map name="segmentation_da_xsd_Element_v" id="segmentation_da_xsd_Element_v">
                                  <area alt="segmentation_da_xsd.tmp#vertex_type_id" href="segmentation_da_xsd.html#vertex_type_id" coords="184,78,370,120" />
                                  <area alt="segmentation_da_xsd.tmp#vertex_type_designation" href="segmentation_da_xsd.html#vertex_type_designation" coords="184,130,390,190" />
                                  <area alt="segmentation_da_xsd.tmp#vertex_type_x" href="segmentation_da_xsd.html#vertex_type_x" coords="241,207,346,249" />
@@ -10973,7 +10980,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_vertex_type_z" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_vertex_type_z');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_vertex_type_z" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_z_4.jpeg" /></div>
+                           <div id="diagram_vertex_type_z" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_z_2.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -11172,7 +11179,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_triangle_type_v" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_triangle_type_v');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_triangle_type_v" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_v.jpeg" /></div>
+                           <div id="diagram_triangle_type_v" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_v_1.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -12388,7 +12395,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_hsvType_value" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_hsvType_value');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_hsvType_value" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_value.jpeg" /></div>
+                           <div id="diagram_hsvType_value" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_value_1.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -12678,7 +12685,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_integerVectorType_x" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_integerVectorType_x');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_integerVectorType_x" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_x_5.jpeg" /></div>
+                           <div id="diagram_integerVectorType_x" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_x_1.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -12748,7 +12755,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_integerVectorType_y" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_integerVectorType_y');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_integerVectorType_y" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_y_5.jpeg" /></div>
+                           <div id="diagram_integerVectorType_y" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_y_1.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -12818,7 +12825,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_integerVectorType_z" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_integerVectorType_z');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_integerVectorType_z" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_z.jpeg" /></div>
+                           <div id="diagram_integerVectorType_z" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_z_1.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -12992,7 +12999,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_positiveIntegerVectorType_x" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_positiveIntegerVectorType_x');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_positiveIntegerVectorType_x" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_x_2.jpeg" /></div>
+                           <div id="diagram_positiveIntegerVectorType_x" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_x_4.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -13132,7 +13139,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_positiveIntegerVectorType_z" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_positiveIntegerVectorType_z');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_positiveIntegerVectorType_z" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_z_3.jpeg" /></div>
+                           <div id="diagram_positiveIntegerVectorType_z" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_z_4.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -13202,7 +13209,7 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
                            <div class="floatRight"><input id="button_diagram_colourType_name" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_colourType_name');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_colourType_name" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_name_1.jpeg" /></div>
+                           <div id="diagram_colourType_name" style="display:block"><img alt="Diagram" border="0" src="img/segmentation_da_xsd_Element_name_2.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -20650,6 +20657,9 @@ Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute errone
 </span><span class="tT"></span><span class="tI">
 </span><span class="tT">0.8.0.dev1, 2020/01/29, Paul Korir:</span><span class="tI">
 </span><span class="tT">Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute erroneously placed in 'software_list' and should be a list of 0 or more 'software' elements</span><span class="tI">
+</span><span class="tT"></span><span class="tI">
+</span><span class="tT">0.8.0.dev1, 2023/01/30, Paul Korir:</span><span class="tI">
+</span><span class="tT">Clarified that transform units are in angstroms (Å).</span><span class="tI">
 </span></pre></td>
                                     </tr>
                                  </table>
@@ -20847,6 +20857,8 @@ Version History
 0.8.0.dev1, 2020/01/29, Paul Korir:
 Bugfix: 'software' elements should have an 'id' attribute; 'id' attribute erroneously placed in 'software_list' and should be a list of 0 or more 'software' elements
 
+0.8.0.dev1, 2023/01/30, Paul Korir:
+Clarified that transform units are in angstroms (Å).
 </span><span class="tCD">]]</span><span class="tCD">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
